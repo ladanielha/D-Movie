@@ -1,20 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from "react";
 
 import HeroSlide from "../components/hero-slide/HeroSlide";
 
-import tmdbApi, {category, movieType} from "../api/tmdbApi";
-import apiConfig from "../api/apiConfig";
-
+import tmdbApi, { movieType } from "../api/tmdbApi";
 
 const Home = () => {
-
-  const [movieItems , setMovieItems] = useState([]);
+  const [movieItems, setMovieItems] = useState([]);
 
   useEffect(() => {
     const getMovies = async () => {
-      const params = {page: 1};
+      const params = { page: 1 };
       try {
-        const response = await tmdbApi.getMoviesList(movieType.popular, {params});
+        const response = await tmdbApi.getMoviesList(movieType.popular, {
+          params,
+        });
         setMovieItems(response.results.slice(0, 4));
         console.log(response);
       } catch {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Autoplay } from "swiper/modules";
-import SwiperCore, { SwiperSlide, Swiper } from "swiper/react";
+import { SwiperSlide, Swiper } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 
 import Button, { OutlineButton } from "../button/Button";
