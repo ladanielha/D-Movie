@@ -10,7 +10,7 @@
     cd D-Movie
 3. Install Node Modules
     ```bash
-    npm run dev
+    npm i
 4. Run project with 
     ```bash
     npm run dev 
